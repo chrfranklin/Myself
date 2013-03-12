@@ -7,7 +7,15 @@ Self::Application.routes.draw do
   #comments
   match '/visit' =>'comments#visit'
   #login
+  resources:customer
   match '/signin' => 'login#signin'
+  match '/signup' => 'login#signup'
+  #article
+  match "/article" => "articles#passages"
+  #customer
+  match "/new" => "customer#new"
+  post "/users" =>"login#signup"#, as: 'users'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

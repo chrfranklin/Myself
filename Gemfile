@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-#gem 'bootstrap-sass'
-gem "twitter-bootstrap-rails"
-gem 'bcrypt-ruby', '3.0.1'
+gem 'bootstrap-sass'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
@@ -34,7 +33,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

@@ -1,4 +1,6 @@
-@import "bootstrap";
+/*
+=require bootstrap
+*/
 
 /* universal */
 
@@ -67,4 +69,13 @@ p {
 #logo:hover {
   color: #ccc;
   text-decoration: none;
+}
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto !important;
+  margin-bottom: 15px;
 }
