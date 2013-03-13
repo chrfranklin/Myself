@@ -6,18 +6,21 @@ Self::Application.routes.draw do
   match '/contact' =>'user#contact'
   #comments
   match '/visit' =>'comments#visit'
-  #login
-  match '/signin' => 'login#signin'
+  #login登录所有功能路由
+  resources :sessions,only:[:new,:create,:destroy]
+  match '/signin' => 'sessions#new'
+  match "/signout"=>"sessions#destroy",via: :delete
+  
   #match '/signup' => 'login#signup'
   #article
   match "/article" => "articles#passages"
-  #customer
-  resources:customers
+  #customer用户注册所有功能路由
+  resources :customers
   match "/customerNew" => "customers#new"
   match "/customers" =>"customers#new"##创建（注册）新用户的页面
-  post  "/customers" =>"customers#new"
-  resources :users
-  get "/users" =>"customer#new"#, as: 'allUsers'
+
+  
+  #get "/users" =>"customer#new"#, as: 'allUsers'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

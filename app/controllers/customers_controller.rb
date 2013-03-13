@@ -13,10 +13,13 @@ class CustomersController < ApplicationController
   end
   
   def create
-    @customers = User.new(params[:customer])
+    @customers = User.new(params[:user])
+    p "=========="
+    p @customers 
+    p "=========="
     if @customers.save
-      #flash[:success] = "欢迎来到寂静小站"
-      redirect_to @customers
+      flash[:success] = "welcome"
+      redirect_to :action => "home" ,:controller=>"user"
     else
       render 'new'
     end
