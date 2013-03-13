@@ -7,15 +7,17 @@ Self::Application.routes.draw do
   #comments
   match '/visit' =>'comments#visit'
   #login
-  resources:customer
   match '/signin' => 'login#signin'
-  match '/signup' => 'login#signup'
+  #match '/signup' => 'login#signup'
   #article
   match "/article" => "articles#passages"
   #customer
-  match "/new" => "customer#new"
-  post "/users" =>"login#signup"#, as: 'users'
-  
+  resources:customers
+  match "/customerNew" => "customers#new"
+  match "/customers" =>"customers#new"##创建（注册）新用户的页面
+  post  "/customers" =>"customers#new"
+  resources :users
+  get "/users" =>"customer#new"#, as: 'allUsers'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
