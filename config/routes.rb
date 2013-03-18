@@ -1,24 +1,22 @@
 Self::Application.routes.draw do
-  root to: 'user#home'
-  match '/home' => 'user#home'
+  root to: 'users#home'
+  match '/home' => 'users#home'
   #user
-  match '/introduce' => 'user#introduce'
-  match '/contact' =>'user#contact'
+  match '/introduce' => 'users#introduce'
+  match '/contact' =>'users#contact'
   #comments
-  match '/visit' =>'comments#visit'
+#  match '/visit' =>'comments#visit'
   #login登录所有功能路由
   resources :sessions,only:[:new,:create,:destroy]
   match '/signin' => 'sessions#new'
-  match "/signout"=>"sessions#destroy",via: :delete
+  match "/signout"=>"sessions#destroy"
   
-  #match '/signup' => 'login#signup'
-  #article
-  match "/article" => "articles#passages"
-  #customer用户注册所有功能路由
-  resources :customers
-  match "/customerNew" => "customers#new"
-  match "/customers" =>"customers#new"##创建（注册）新用户的页面
-
+  #Admin
+  get 'admin' => 'admins#home'
+  get '/admin/signin' => 'sessions#new'
+  
+  resources :users
+  resources :'articles'
   
   #get "/users" =>"customer#new"#, as: 'allUsers'
   # The priority is based upon order of creation:
