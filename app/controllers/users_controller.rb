@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user,only:[:edit,:update]
   before_filter :correct_user,only:[:edit,:update]
+  
   #下边是网站首页固定页面链接方法
   def home
   end
@@ -52,7 +53,6 @@ class UsersController < ApplicationController
   
   
   private
-
     def signed_in_user
       redirect_to signin_path, notice: "Please sign in." unless signed_in?
     end

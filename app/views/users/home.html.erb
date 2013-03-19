@@ -4,6 +4,20 @@
   <h2>
     这里是寂静之坑小站的第一版本页面。
   </h2>
+  <a class='btn btn-large btn-primary' data-toggle="modal" href="#myModal">现在就来认识寂静之坑吧</a>
+</div>
 
-  <%= link_to "现在就来认识寂静之坑吧", introduce_path, class: "btn btn-large btn-primary" %>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">欢迎关注寂静之坑</h3>
+  </div>
+  <div class="modal-body">
+    <p class="text-info">这里是寂静之坑博客的第一个版本，随着技术水平不断的提升，网站会越来越漂亮，同时欢迎大家提出意见与建议。感谢大家的关注</p>
+    <p><strong>最潮流的联系方式</strong>&nbsp;&nbsp;<%= image_tag('qrcode.png',:class=>'img-polaroid') %></p>
+        
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
 </div>
