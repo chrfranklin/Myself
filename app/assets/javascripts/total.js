@@ -1,1 +1,7 @@
-$('#elem').popover()
+
+$(function() {
+  $( "#datepicker" ).datepicker();
+  $('#email').popover();
+  $('#facebook').popover();
+  $('#github').popover();
+});  
