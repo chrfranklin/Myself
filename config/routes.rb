@@ -1,14 +1,12 @@
 Self::Application.routes.draw do
   root to: 'users#home'
-  match '/home' => 'users#home'
+  get '/home' => 'users#home'
   #user
-  match '/introduce' => 'users#introduce'
-  match '/contact' =>'users#contact'
-  #comments
-#  match '/visit' =>'comments#visit'
+  get '/introduce' => 'users#introduce'
+  get '/contact' =>'users#contact'
   #login登录所有功能路由
   resources :sessions,only:[:new,:create,:destroy]
-  match '/signin' => 'sessions#new'
+  get '/signin' => 'sessions#new'
   match "/signout"=>"sessions#destroy"
   
   #Admin
