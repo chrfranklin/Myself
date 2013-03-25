@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="span6 offset3">
+  <h1 class="text-info">Email发送一览表</h1>
+  <table class="table table-bordered">
+    <% @email.each do |e| %>
+    <tr>
+      <td><%=e.id%></td>
+      <td><%=e.email %></td>
+      <td><%=e.created_at %></td>
+    </tr>
+    <%end%>
+  </table>
+  </div>
+<!---  Date: <div id="datepicker"></div> ---->
+</div>  

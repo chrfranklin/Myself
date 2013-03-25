@@ -1,4 +1,6 @@
 Self::Application.routes.draw do
+  get "send_email/new"
+
   root to: 'users#home'
   get '/home' => 'users#home'
   #user
@@ -14,7 +16,8 @@ Self::Application.routes.draw do
   get '/admin/signin' => 'sessions#new'
   
   resources :users
-  resources :'articles'
+  resources :articles
+  resources :send_emails
   
   #get "/users" =>"customer#new"#, as: 'allUsers'
   # The priority is based upon order of creation:

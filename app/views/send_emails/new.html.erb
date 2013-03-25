@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="span6 offset3">
+    <h3>一键发送建立</h3>
+        <p>请填写正确的Email邮箱地址</p>
+    <div class='sendEmail'>
+      <%= form_for @email do |f| %>
+        
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+
+        <%= f.submit "Send Email", class: "btn btn-large btn-primary" %>
+      <% end %>
+    </div>
+  </div> 
+</div>
