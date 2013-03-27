@@ -12,12 +12,12 @@ class SendEmailsController < ApplicationController
   def create
     @email=SendEmail.new(params[:send_email])
     
-#    if @email.save
+    if @email.save
       CommentMailer.comment_notify_email(@email.email).deliver
       redirect_to root_path
- #   else
-#      render 'new'
- #   end
+    else
+      render 'new'
+    end
     
   end
   

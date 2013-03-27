@@ -1,19 +1,17 @@
 Self::Application.routes.draw do
   get "send_email/new"
 
-  root to: 'users#home'
-  get '/home' => 'users#home'
-  #user
-  get '/introduce' => 'users#introduce'
-  get '/contact' =>'users#contact'
-  #login登录所有功能路由
+  root to: 'other#home'
+  get '/home' => 'other#home'
+  get '/histroy' => 'other#history'
+  get '/introduce' => 'other#introduce'
+  get '/contact' =>'other#contact'
+  #session
   resources :sessions,only:[:new,:create,:destroy]
-  get '/signin' => 'sessions#new'
   match "/signout"=>"sessions#destroy"
   
   #Admin
   get 'admin' => 'admins#home'
-  get '/admin/signin' => 'sessions#new'
   
   resources :users
   resources :articles

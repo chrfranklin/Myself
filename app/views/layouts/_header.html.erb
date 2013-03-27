@@ -1,13 +1,14 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "寂静之坑", home_path , id: "logo" %>
+      <%= link_to "寂静之坑", root_path , id: "logo" %>
       <nav>
         <ul class="nav pull-right">
           <li class='nav_title'><%= link_to "坑地介绍", introduce_path %></li>
           <li><%= link_to "寂静叨叨", '/articles' %></li>
           <li><%= link_to "联系寂静", contact_path %></li>  
-          <li><%= link_to "秘密发送", "/send_emails/new" %></li>        
+          <li><%= link_to "秘密发送", "/send_emails/new" %></li>
+          <li><%= link_to "升级历史", histroy_path %></li>        
           <% if signed_in? %>          
             <li><%= link_to "退出", signout_path %></li>          
           <% end %>
