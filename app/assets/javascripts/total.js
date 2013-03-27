@@ -1,7 +1,5 @@
-
-$(function() {
-  $( "#datepicker" ).datepicker();
-  $('#email').popover();
-  $('#facebook').popover();
-  $('#github').popover();
-});  
+$(function(){
+  $('#container').masonry({
+    itemSelector:'.box'
+  })
+})

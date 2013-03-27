@@ -5,7 +5,17 @@
       <nav>
         <ul class="nav pull-right">
           <li class='nav_title'><%= link_to "坑地介绍", introduce_path %></li>
-          <li><%= link_to "寂静叨叨", '/articles' %></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              寂静叨叨
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "列表式", '/articles' %></li>
+              <li><%= link_to "瀑布式", '/articlessault' %></li>
+            </ul>
+          </li>
+          
           <li><%= link_to "联系寂静", contact_path %></li>  
           <li><%= link_to "秘密发送", "/send_emails/new" %></li>
           <li><%= link_to "升级历史", histroy_path %></li>        

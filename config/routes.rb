@@ -12,6 +12,8 @@ Self::Application.routes.draw do
   
   #Admin
   get 'admin' => 'admins#home'
+  #Articles
+  get 'articlessault' => 'articles#sault'
   
   resources :users
   resources :articles

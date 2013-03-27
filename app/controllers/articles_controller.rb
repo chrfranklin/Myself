@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter :signed_in_user,only:[:edit,:update]
+  before_filter :signed_in_user
   
   def passages
   end
@@ -20,6 +20,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article]) 
     @article.user_id = session[:uid]
     @article.save    
+    redirect_to @article
   end
   
   def edit
@@ -36,9 +37,13 @@ class ArticlesController < ApplicationController
     end    
   end
   
+  def sault
+     @article = Article.all
+  end
+  
   private
     def signed_in_user
-      redirect_to signin_path, notice: "Please sign in." unless signed_in?
+      redirect_to '/sessions/new', notice: "Please sign in." unless signed_in?
     end
     
   

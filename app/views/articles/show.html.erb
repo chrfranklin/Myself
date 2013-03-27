@@ -5,6 +5,7 @@
       <p>
         <small><%=@article.content%></small>
       </p>
-    </div>
+      <div class='ago'><%= time_ago_in_words(@article.created_at)%> ago</div>
+    </div>    
   </div>
 </div>  
