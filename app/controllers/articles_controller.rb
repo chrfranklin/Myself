@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter :signed_in_user
+  before_filter :signed_in_user,only:[:update, :destroy,:edit,:new]
   
   def passages
   end
