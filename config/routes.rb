@@ -19,6 +19,5 @@ Self::Application.routes.draw do
   resources :articles
   resources :send_emails   
   
-  match "/auth/facebook"=>'sessions#create'
-  match 'callback' =>'sessions#create'
+  match "/auth/:provider/facebook"=>'sessions#create'
 end

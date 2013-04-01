@@ -100,6 +100,9 @@ GEM
       rack
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
+    omniauth-github (1.1.0)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.1)
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
@@ -198,6 +201,7 @@ DEPENDENCIES
   masonry-rails
   omniauth
   omniauth-facebook
+  omniauth-github
   quiet_assets
   rails (= 3.2.11)
   rspec-rails (= 2.11.0)
