@@ -5,6 +5,10 @@ gem 'bootstrap-sass'
 gem 'jquery-ui-rails'
 gem 'masonry-rails'
 
+#omniauth
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
