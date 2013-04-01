@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     @a=request
+    redirect_to callback_path
   #  user = User.find_by_email(params[:session][:email])
     
  #   if User.checking(user,params[:session][:password])
