@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    degbugger
+    @a=request
   #  user = User.find_by_email(params[:session][:email])
     
  #   if User.checking(user,params[:session][:password])
