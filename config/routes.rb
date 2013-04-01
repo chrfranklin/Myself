@@ -20,5 +20,4 @@ Self::Application.routes.draw do
   resources :send_emails   
   
   match "/auth/facebook"=>'sessions#create'
-  match "/auth/facebook"=>'sessions#create'
 end
