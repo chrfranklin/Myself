@@ -3,7 +3,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    debugger
+   p '======'
+   p request
+   p '======'
   #  user = User.find_by_email(params[:session][:email])
     
  #   if User.checking(user,params[:session][:password])
